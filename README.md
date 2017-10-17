@@ -1,4 +1,4 @@
-# Serverless Starter App
+# Serverless Starter App [![Build Status](https://api.travis-ci.org/comicrelief/serverless-starter-app.svg?branch=master)](https://travis-ci.org/comicrelief/serverless-starter-app)
 A starter application that can be used as a base for serverless projects.
 
 ## Installation
