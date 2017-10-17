@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-unused-vars": "off",
+    "arrow-body-style": "off",
+    "import/prefer-default-export": "off",
+    "no-console": "off"
+  }
+}
