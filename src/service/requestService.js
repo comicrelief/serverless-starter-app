@@ -7,15 +7,15 @@ class RequestService {
 
   /**
    * RequestService constructor
-   * @param event
+   * @param event object
    */
-  constructor(event) {
+  constructor(event: object) {
     this.event = event;
   }
 
   /**
    * Get a parameter from the request.
-   * @param param
+   * @param param string
    * @param ifNull
    * @return {*}
    */
