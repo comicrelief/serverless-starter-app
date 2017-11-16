@@ -17,7 +17,7 @@ functions:
       - http:
           path: hello
           method: get
-          integration: lambda
+          cors: true
 
 plugins:
   - serverless-mocha-plugin
