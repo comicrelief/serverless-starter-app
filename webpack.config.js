@@ -1,33 +1,36 @@
 const nodeExternals = require('webpack-node-externals');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const slsw = require('serverless-webpack');
+const path = require('path');
 
 module.exports = {
-  entry: './handler.js',
+  entry: slsw.lib.entries,
+  devtool: 'source-map',
   target: 'node',
   externals: [nodeExternals({
     modulesFromFile: true,
   })],
+  performance: {
+    hints: false,
+  },
   output: {
     libraryTarget: 'commonjs',
-    path: 'build',
-    filename: 'handler.js', // this should match the first part of function handler in serverless.yml
+    path: path.join(__dirname, '.webpack'),
+    filename: '[name].js',
+    sourceMapFilename: '[name].map',
   },
-  plugins: [
-    new UglifyJSPlugin(),
-  ],
   module: {
-    preLoaders: [
-      {
-        test: /\.json$/,
-        exclude: /node_modules/,
-        loader: 'json-loader',
-      },
-    ],
-    loaders: [
+    rules: [
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
+          },
+        ],
       },
     ],
   },

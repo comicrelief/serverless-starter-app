@@ -1,9 +1,7 @@
-import HelloAction from '../../src/action/hello.action';
+import HelloAction from '../../src/Action/Hello.action';
 
 import ServerlessMochaPlugin from 'serverless-mocha-plugin';
-import {lambdaPromisifier} from "../lib/lambda-promisifier.js"
-
-import { success } from "../../src/service/responseService";
+import { lambdaPromisifier } from "../lib/lambda-promisifier.js"
 
 const expect = ServerlessMochaPlugin.chai.expect;
 const promisifiedAction = lambdaPromisifier(HelloAction);
@@ -17,13 +15,13 @@ describe('HelloAction', () => {
   });
 
   it('Should expect the response to return a successful status', () => {
-    return promisifiedAction({queryStringParameters : {}}).then((response, data, test) => {
-      expect(response.status).to.eql(success);
+    return promisifiedAction({queryStringParameters : {}}).then((response) => {
+      expect(response.statusCode).to.eql(200);
     });
   });
 
   it('Should return CORS headers', () => {
-    return promisifiedAction({queryStringParameters : {}}).then((response, data, test) => {
+    return promisifiedAction({queryStringParameters : {}}).then((response) => {
       const headers = response.headers;
       expect(headers['Content-Type']).to.eql('application/json');
       expect(headers['Access-Control-Allow-Origin']).to.eql('*');
@@ -32,16 +30,9 @@ describe('HelloAction', () => {
   });
 
   it('Should expect the response to return a response of hello', () => {
-    return promisifiedAction({queryStringParameters : {}}).then((response, data, test) => {
+    return promisifiedAction({queryStringParameters : {}}).then((response) => {
       const body = JSON.parse(response.body);
-      expect(body.test).to.eql('Hello');
-    });
-  });
-
-  it('Should expect the response to return a customised response when a name is set using the query parameters', () => {
-    return promisifiedAction({queryStringParameters : { name: 'Adam' }}).then((response, data, test) => {
-      const body = JSON.parse(response.body);
-      expect(body.test).to.eql('Hello Adam');
+      expect(body.data.response).to.eql('Hello');
     });
   });
 
