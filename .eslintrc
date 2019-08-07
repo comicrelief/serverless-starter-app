@@ -1,11 +1,15 @@
 {
   "extends": [
     "airbnb",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended"
   ],
   "parser": "babel-eslint",
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "sonarjs",
+    "unicorn"
   ],
   "rules": {
     "no-unused-vars": "off",
@@ -13,6 +17,7 @@
     "import/prefer-default-export": "off",
     "no-console": "off",
     "max-len": "off",
-    "flowtype/no-types-missing-file-annotation": "off"
+    "flowtype/no-types-missing-file-annotation": "off",
+    "unicorn/filename-case": "off"
   }
 }
