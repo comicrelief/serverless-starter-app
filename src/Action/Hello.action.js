@@ -7,7 +7,7 @@ import {
 
 import CONFIGURATION from '../Config/Configuration';
 
-export default LambdaWrapper(CONFIGURATION, (di: DependencyInjection, request: RequestService, done) => {
+export default LambdaWrapper(CONFIGURATION, async(di: DependencyInjection, request: RequestService) => {
   // Get a name from the query parameters.
   const name = request.get('name');
 
@@ -15,5 +15,5 @@ export default LambdaWrapper(CONFIGURATION, (di: DependencyInjection, request: R
     response: name !== null ? `Hello ${name}` : 'Hello',
   }, 200, 'ok');
 
-  done(null, response.generate());
+  return response.generate();
 });

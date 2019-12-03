@@ -1,4 +1,14 @@
 {
-  "presets": ["@babel/preset-env"],
-  "plugins": ["syntax-flow", "transform-flow-strip-types"]
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": "commonjs",
+      "targets": {
+        "node": "10.15"
+      }
+    }]
+  ],
+  "plugins": [
+    "syntax-flow",
+    "transform-flow-strip-types"
+  ]
 }
