@@ -39,11 +39,15 @@
     "webpack-node-externals": "^1.6.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha \"tests/feature/**/*.feature.js\" --require @babel/register --colors"
+    "test": "./node_modules/.bin/mocha \"tests/feature/**/*.feature.js\" --require @babel/register --colors",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "main": "index.js",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
   "dependencies": {
-    "@comicrelief/lambda-wrapper": "^0.0.71"
-  }
+    "@comicrelief/lambda-wrapper": "^0.0.71",
+    "snyk": "^1.258.2"
+  },
+  "snyk": true
 }
