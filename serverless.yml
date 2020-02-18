@@ -23,6 +23,7 @@ plugins:
   - serverless-mocha-plugin
   - serverless-offline
   - serverless-webpack
+  - serverless-dotenv-plugin
 
 custom:
   serverless-offline:
