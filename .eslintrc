@@ -13,6 +13,7 @@
   ],
   "rules": {
     "import/no-cycle": "off",
+    "linebreak-style": "off",
     "max-len": "off",
     "flowtype/no-types-missing-file-annotation": "off",
     "unicorn/filename-case": "off"
