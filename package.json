@@ -40,7 +40,10 @@
     "webpack-node-externals": "^1.6.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha \"tests/feature/**/*.feature.js\" --require @babel/register --colors"
+    "lint": "eslint .",
+    "test": "mocha --require @babel/register --colors",
+    "unit-test": "yarn test 'tests/unit/**/*.unit.js'",
+    "feature-test": "yarn test 'tests/feature/**/*.feature.js'"
   },
   "main": "index.js",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
