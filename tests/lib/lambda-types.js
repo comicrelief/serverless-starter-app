@@ -13,6 +13,7 @@ export type AWSMobileSDKClient = {
   app_package_name: string
 };
 
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export type AWSMobileSDKClientEnv = {
   platform_version: number | string,
   platform: string,

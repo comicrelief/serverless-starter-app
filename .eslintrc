@@ -1,21 +1,3 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:flowtype/recommended",
-    "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
-  ],
-  "parser": "babel-eslint",
-  "plugins": [
-    "flowtype",
-    "sonarjs",
-    "unicorn"
-  ],
-  "rules": {
-    "import/no-cycle": "off",
-    "linebreak-style": "off",
-    "max-len": "off",
-    "flowtype/no-types-missing-file-annotation": "off",
-    "unicorn/filename-case": "off"
-  }
+  "extends": "@comicrelief/eslint-config"
 }
