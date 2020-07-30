@@ -30,5 +30,6 @@ custom:
     port: 3001
     babelOptions:
       presets: ["env"]
-  webpackIncludeModules:
-    packagePath: './package.json'
+  webpack:
+    packager: 'yarn'
+    includeModules: true
