@@ -4,6 +4,7 @@ const path = require('path');
 
 module.exports = {
   entry: slsw.lib.entries,
+  mode: process.env.WEBPACK_MODE || 'production',
   devtool: 'source-map',
   target: 'node',
   externals: [nodeExternals({
