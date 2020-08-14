@@ -9,6 +9,14 @@
   ],
   "plugins": [
     "syntax-flow",
-    "transform-flow-strip-types"
+    "transform-flow-strip-types",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@": "."
+        }
+      }
+    ]
   ]
 }

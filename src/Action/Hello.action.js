@@ -5,7 +5,8 @@ import {
   RequestService,
 } from '@comicrelief/lambda-wrapper';
 
-import CONFIGURATION from '../Config/Configuration';
+import CONFIGURATION from '@/src/Config/Configuration';
+
 
 export default LambdaWrapper(CONFIGURATION, async (di: DependencyInjection, request: RequestService) => {
   // Get a name from the query parameters.
