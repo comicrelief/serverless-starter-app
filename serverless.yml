@@ -30,6 +30,9 @@ custom:
     port: 3001
     babelOptions:
       presets: ["env"]
+
   webpack:
     packager: 'yarn'
-    includeModules: true
+    includeModules:
+      forceExclude:
+        - aws-sdk
