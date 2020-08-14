@@ -7,7 +7,8 @@ provider:
   runtime: nodejs12.x
   memorySize: 128
   timeout: 60
-  stage: dev
+  region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
+  stage: ${opt:stage, 'dev'}
   versionFunctions: false
 
 functions:
