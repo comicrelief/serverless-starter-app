@@ -44,7 +44,8 @@
     "lint": "eslint .",
     "test": "mocha --require @babel/register --colors",
     "unit-test": "yarn test 'tests/setup.js' 'tests/unit/**/*.unit.js'",
-    "feature-test": "yarn test 'tests/setup.js' 'tests/feature/**/*.feature.js'"
+    "feature-test": "yarn test 'tests/setup.js' 'tests/feature/**/*.feature.js'",
+    "offline-feature-test": "USE_SERVERLESS_OFFLINE=1 yarn feature-test"
   },
   "main": "index.js",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
