@@ -1,5 +1,15 @@
+# Build artifacts
 node_modules
-env.json
-.idea
+yarn-error.log
 .serverless
 .webpack
+
+# Secrets
+.env
+.envrc
+env.json
+private.key
+
+# Editors
+.idea
+.vscode

@@ -1,3 +1,6 @@
 {
-  "extends": "@comicrelief/eslint-config/tests"
+  "extends": "@comicrelief/eslint-config/tests",
+  "settings": {
+    "import/resolver": "webpack"
+  }
 }

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { LambdaContext } from './lambda-types';
+import type { LambdaContext } from '@/tests/lib/lambda-types';
 
 export const getContext = () => {
   const noop = () => ({});

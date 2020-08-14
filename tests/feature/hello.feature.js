@@ -1,7 +1,8 @@
 
 import ServerlessMochaPlugin from 'serverless-mocha-plugin';
-import { lambdaPromisifier } from '../lib/lambda-promisifier';
-import HelloAction from '../../src/Action/Hello.action';
+
+import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
+import HelloAction from '@/src/Action/Hello.action';
 
 const { chai: { expect } } = ServerlessMochaPlugin;
 const promisifiedAction = lambdaPromisifier(HelloAction);

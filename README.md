@@ -1,5 +1,5 @@
 # Serverless Starter App [![Build Status](https://api.travis-ci.org/comicrelief/serverless-starter-app.svg?branch=master)](https://travis-ci.org/comicrelief/serverless-starter-app)
-An ES6 starter application that can be used as a base for serverless projects hosted on AWS. 
+An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
 
 ## Installation
 
@@ -10,16 +10,18 @@ yarn install
 
 ## Local Development
 
-For local development you can simulate lambda and an API endpoint locally using 
+For local development you can simulate lambda and an API endpoint locally using
 the following command.
 
 ```bash
 serverless offline start
 ```
 
+This repository uses JavaScript import aliases with Webpack. If you are using VS Code, the `jsconfig.json` file should handle the autocompletion for you. If you are using WebStorm, you can refer to [this stackoverflow thread](https://stackoverflow.com/questions/34943631/path-aliases-for-imports-in-webstorm).
+
 ## Testing
 
-Tests are located in the `tests` folder an can be invoked by running `yarn test`. These tests will invoke the defined 
+Tests are located in the `tests` folder an can be invoked by running `yarn test`. These tests will invoke the defined
 actions in a wrapper, where the response can then be tested.
 
 ## Further Reading
@@ -31,7 +33,7 @@ actions in a wrapper, where the response can then be tested.
     - Provides static type checking.
 - [Serverless Framework](https://serverless.com/)
     - The framework that the project is built on.
-    
+
 ## License
 
 The Serverless Starter App is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
