@@ -47,7 +47,7 @@
     "lint": "eslint .",
     "test": "mocha --require @babel/register --require tests/setup.js --colors",
     "unit-test": "yarn test 'tests/unit/**/*.unit.js'",
-    "feature-test": "yarn test 'tests/feature/**/*.feature.js'",
+    "feature-test": "yarn test 'tests/feature/index.js'",
     "offline-feature-test": "USE_SERVERLESS_OFFLINE=1 yarn feature-test"
   },
   "main": "index.js",
