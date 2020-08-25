@@ -53,6 +53,6 @@
   "main": "index.js",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
   "dependencies": {
-    "@comicrelief/lambda-wrapper": "^0.0.71"
+    "@comicrelief/lambda-wrapper": "^1.1.4"
   }
 }
