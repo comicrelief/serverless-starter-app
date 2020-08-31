@@ -8,8 +8,8 @@
     }]
   ],
   "plugins": [
-    "syntax-flow",
-    "transform-flow-strip-types",
+    "@babel/plugin-syntax-flow",
+    "@babel/plugin-transform-flow-strip-types",
     [
       "module-resolver",
       {
