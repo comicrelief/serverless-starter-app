@@ -28,7 +28,9 @@ plugins:
 
 custom:
   serverless-offline:
-    port: 3001
+    httpPort: 3001 #port to access API endpoints through
+    lambdaPort: 3002 #default is 3002
+    noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]
 

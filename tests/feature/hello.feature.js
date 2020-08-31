@@ -9,7 +9,7 @@ const {
 const promisifiedAction = lambdaPromisifier(HelloAction);
 
 // Test definitions.
-describe('HelloAction', () => {
+describe('HelloAction', function () {
   it('Should expect the response to return a successful status', async () => {
     const response = await promisifiedAction({ queryStringParameters: {} });
     expect(response.statusCode).to.eql(200);
