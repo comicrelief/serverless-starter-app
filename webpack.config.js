@@ -7,9 +7,11 @@ module.exports = {
   mode: process.env.WEBPACK_MODE || 'production',
   devtool: 'source-map',
   target: 'node',
-  externals: [nodeExternals({
-    modulesFromFile: true,
-  })],
+  externals: [
+    nodeExternals({
+      modulesFromFile: true,
+    }),
+  ],
   performance: {
     hints: false,
   },

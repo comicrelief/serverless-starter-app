@@ -1,10 +1,11 @@
-
 import ServerlessMochaPlugin from 'serverless-mocha-plugin';
 
 import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
 import HelloAction from '@/src/Action/Hello.action';
 
-const { chai: { expect } } = ServerlessMochaPlugin;
+const {
+  chai: { expect },
+} = ServerlessMochaPlugin;
 const promisifiedAction = lambdaPromisifier(HelloAction);
 
 // Test definitions.
