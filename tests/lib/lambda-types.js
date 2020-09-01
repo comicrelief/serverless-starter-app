@@ -2,7 +2,7 @@
 
 export type AmazonCognitoIdentity = {
   cognito_identity_id: number | string,
-  cognito_identity_pool_id: number | string
+  cognito_identity_pool_id: number | string,
 };
 
 export type AWSMobileSDKClient = {
@@ -10,7 +10,7 @@ export type AWSMobileSDKClient = {
   app_title: string,
   app_version_name: string,
   app_version_code: number | string,
-  app_package_name: string
+  app_package_name: string,
 };
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
@@ -19,14 +19,13 @@ export type AWSMobileSDKClientEnv = {
   platform: string,
   make: any,
   model: any,
-  locale: string
+  locale: string,
 };
-
 
 export type AWSMobileSDKClientContext = {
   client: AWSMobileSDKClient,
   Custom: any,
-  env: AWSMobileSDKClientEnv
+  env: AWSMobileSDKClientEnv,
 };
 
 export type LambdaContext = {
@@ -42,5 +41,5 @@ export type LambdaContext = {
   logGroupName: string,
   logStreamName: string,
   identity: ?AmazonCognitoIdentity,
-  clientContext: ?AWSMobileSDKClientContext
+  clientContext: ?AWSMobileSDKClientContext,
 };

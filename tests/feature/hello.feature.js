@@ -1,14 +1,15 @@
-
 import ServerlessMochaPlugin from 'serverless-mocha-plugin';
 
 import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
 import HelloAction from '@/src/Action/Hello.action';
 
-const { chai: { expect } } = ServerlessMochaPlugin;
+const {
+  chai: { expect },
+} = ServerlessMochaPlugin;
 const promisifiedAction = lambdaPromisifier(HelloAction);
 
 // Test definitions.
-describe('HelloAction', () => {
+describe('HelloAction', function () {
   it('Should expect the response to return a successful status', async () => {
     const response = await promisifiedAction({ queryStringParameters: {} });
     expect(response.statusCode).to.eql(200);

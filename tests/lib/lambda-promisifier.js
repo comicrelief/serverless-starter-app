@@ -2,9 +2,9 @@
 
 import type { LambdaContext } from '@/tests/lib/lambda-types';
 
-export const getContext = () => {
-  const noop = () => ({});
+const noop = () => ({});
 
+export const getContext = () => {
   return {
     succeed: noop,
     fail: noop,
@@ -23,10 +23,8 @@ export const getContext = () => {
 };
 
 export function lambdaPromisifier(lambda: (options: any, context: LambdaContext) => void): (options: any) => Promise<any> {
-  return (options: any) => new Promise((resolve, reject) => lambda(options, {
-    ...getContext(),
-    succeed: resolve,
-    fail: reject,
-    done: (error, result) => (error ? reject(error) : resolve(result)),
-  }));
+  return (options: any) =>
+    lambda(options, {
+      ...getContext(),
+    });
 }
