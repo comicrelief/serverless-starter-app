@@ -37,10 +37,14 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "concourse:deploy-pipeline": "fly -t cr-cicd-engineering set-pipeline -p serverless-starter-app -c concourse/pipeline.yml -l concourse/private.yml",
+    "concourse:login": "fly --target cr-cicd-engineering login --concourse-url https://ci.services.comicrelief.com --team-name engineering",
+    "concourse:sync": "sudo fly -t ci sync",
+    "offline": "sls offline --apiKey api-key",
     "test": "mocha --require @babel/register --require tests/setup.js --colors",
-    "unit-test": "yarn test 'tests/unit/**/*.unit.js'",
-    "feature-test": "yarn test 'tests/feature/index.js'",
-    "offline-feature-test": "USE_SERVERLESS_OFFLINE=1 yarn feature-test"
+    "test:unit": "yarn test 'tests/unit/**/*.unit.js'",
+    "test:feat": "yarn test 'tests/feature/index.js'",
+    "test:offline": "USE_SERVERLESS_OFFLINE=1 yarn test:feat"
   },
   "main": "index.js",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
