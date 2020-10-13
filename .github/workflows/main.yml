@@ -1,0 +1,70 @@
+name: main
+
+on: [push]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          # Comment the next line out
+          # if the repo uses Github Package Registry packages
+          # registry-url: 'https://npm.pkg.github.com'
+
+      - name: Restore packages cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install
+        # Comment the next lines out
+        # if the repo uses Github Package Registry packages
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.COMICRELIEF_GITHUB_REGISTRY_TOKEN }}
+
+      - name: Run Eslint
+        run: yarn lint
+        env:
+          CI: true
+
+  test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          # Comment the next line out
+          # if the repo uses Github Package Registry packages
+          # registry-url: 'https://npm.pkg.github.com'
+
+      - name: Restore packages cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install
+        # Comment the next lines out
+        # if the repo uses Github Package Registry packages
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.COMICRELIEF_GITHUB_REGISTRY_TOKEN }}
+
+      - name: Run unit tests
+        run: yarn test:unit
+        env:
+          CI: true
