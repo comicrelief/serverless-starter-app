@@ -7,6 +7,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/eslint-parser": "^7.11.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
     "@babel/plugin-syntax-flow": "^7.10.4",
     "@babel/plugin-transform-flow-strip-types": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
