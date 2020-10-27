@@ -2,7 +2,7 @@
 
 import type { LambdaContext } from '@/tests/lib/lambda-types';
 
-const noop = () => ({});
+const noop = () => {};
 
 export const getContext = () => {
   return {
@@ -22,9 +22,6 @@ export const getContext = () => {
   };
 };
 
-export function lambdaPromisifier(lambda: (options: any, context: LambdaContext) => void): (options: any) => Promise<any> {
-  return (options: any) =>
-    lambda(options, {
-      ...getContext(),
-    });
+export function lambdaPromisifier(lambda: (event: object, context: LambdaContext) => Promise<any>): (event: object) => Promise<any> {
+  return (event: object) => lambda(event, getContext());
 }
