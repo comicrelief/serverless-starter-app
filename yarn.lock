@@ -980,10 +980,10 @@
   resolved "https://registry.yarnpkg.com/@comicrelief/eslint-config/-/eslint-config-1.0.6.tgz#d2ad982d738a22a9efb9bf28e90afadfe60b4db7"
   integrity sha512-2TIAQlVFQC6I5smTSe3aguL56CJX323fbB8mDqleSqNT12mSZw2vKqfZxKzYTxvxa0wkvFXjaynJ865LUgsNCA==
 
-"@comicrelief/lambda-wrapper@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@comicrelief/lambda-wrapper/-/lambda-wrapper-1.1.5.tgz#fdbe01a0d9a8223668f3ab0f781dd03dabcc06e4"
-  integrity sha512-mgDgBtu2pLArPKYixwGQ2QvvDvGeoSXUR0pXEM3qMvBQ/xXlnlmyAWu8W5QMauxFG15O+jLjubjVv6GKjhJUtA==
+"@comicrelief/lambda-wrapper@^1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@comicrelief/lambda-wrapper/-/lambda-wrapper-1.1.10.tgz#db616b99b832588f16292df9ee9125e5cb292f98"
+  integrity sha512-1r21FGcBQMA/q7iHLLdXuGtWf4v20BhmtpqOMRzh8svmroofRwHUGO2XY/74xBFMM2SnmWr6nRXZx1SKv4K0NQ==
   dependencies:
     "@sentry/node" "^5.20.0"
     alai "1.0.3"
