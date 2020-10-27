@@ -6,13 +6,8 @@ export default LambdaWrapper(CONFIGURATION, async (di: DependencyInjection, requ
   // Get a name from the query parameters.
   const name = request.get('name');
 
-  const response = new ResponseModel(
-    {
-      response: name !== null ? `Hello ${name}` : 'Hello',
-    },
-    200,
-    'ok'
-  );
-
-  return response.generate();
+  const body = {
+    response: name !== null ? `Hello ${name}` : 'Hello',
+  };
+  return ResponseModel.generate(body, 200, 'ok');
 });

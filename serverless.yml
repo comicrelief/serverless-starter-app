@@ -21,15 +21,14 @@ functions:
           cors: true
 
 plugins:
-  - serverless-mocha-plugin
   - serverless-offline
   - serverless-webpack
   - serverless-dotenv-plugin
 
 custom:
   serverless-offline:
-    httpPort: 3001 #port to access API endpoints through
-    lambdaPort: 3002 #default is 3002
+    httpPort: 3001 # port to access API endpoints through
+    lambdaPort: 3002 # default is 3002
     noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]

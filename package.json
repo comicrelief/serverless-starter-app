@@ -4,6 +4,21 @@
   "description": "Comic Relief serverless starter application",
   "author": "Adam Clark",
   "license": "MIT",
+  "repository": "https://github.com/comicrelief/serverless-starter-app",
+  "main": "handler.js",
+  "scripts": {
+    "lint": "eslint .",
+    "concourse:deploy-pipeline": "fly -t cr-cicd-engineering set-pipeline -p serverless-starter-app -c concourse/pipeline.yml -l concourse/private.yml",
+    "concourse:login": "fly --target cr-cicd-engineering login --concourse-url https://ci.services.comicrelief.com --team-name engineering",
+    "concourse:sync": "sudo fly -t ci sync",
+    "offline": "sls offline --apiKey api-key",
+    "test": "jest --colors",
+    "test:feat": "yarn test --selectProjects FEAT",
+    "test:feat:regression": "yarn test:feat --testNamePattern=REGRESSION",
+    "test:feat:sanity": "yarn test:feat --testNamePattern=SANITY",
+    "test:offline": "USE_SERVERLESS_OFFLINE=1 yarn test:feat",
+    "test:unit": "yarn test --selectProjects UNIT"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/eslint-parser": "^7.11.4",
@@ -33,22 +48,7 @@
     "webpack": "^4.44.1",
     "webpack-node-externals": "^2.5.2"
   },
-  "scripts": {
-    "lint": "eslint .",
-    "concourse:deploy-pipeline": "fly -t cr-cicd-engineering set-pipeline -p serverless-starter-app -c concourse/pipeline.yml -l concourse/private.yml",
-    "concourse:login": "fly --target cr-cicd-engineering login --concourse-url https://ci.services.comicrelief.com --team-name engineering",
-    "concourse:sync": "sudo fly -t ci sync",
-    "offline": "sls offline --apiKey api-key",
-    "test": "jest --colors",
-    "test:feat": "yarn test --selectProjects FEAT",
-    "test:feat:regression": "yarn test:feat --testNamePattern=REGRESSION",
-    "test:feat:sanity": "yarn test:feat --testNamePattern=SANITY",
-    "test:offline": "USE_SERVERLESS_OFFLINE=1 yarn test:feat",
-    "test:unit": "yarn test --selectProjects UNIT"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/comicrelief/serverless-starter-app",
   "dependencies": {
-    "@comicrelief/lambda-wrapper": "^1.1.5"
+    "@comicrelief/lambda-wrapper": "^1.1.10"
   }
 }
