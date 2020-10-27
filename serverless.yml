@@ -21,7 +21,6 @@ functions:
           cors: true
 
 plugins:
-  - serverless-mocha-plugin
   - serverless-offline
   - serverless-webpack
   - serverless-dotenv-plugin
