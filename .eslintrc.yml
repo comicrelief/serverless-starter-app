@@ -1,0 +1,5 @@
+extends: '@comicrelief/eslint-config'
+
+settings:
+  import/resolver:
+    babel-module: {}
