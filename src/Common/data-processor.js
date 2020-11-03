@@ -1,4 +1,3 @@
-// import got from 'got';
 import * as https from 'https';
 
 export default class DataProcessor {
