@@ -13,7 +13,7 @@ export default LambdaWrapper(CONFIGURATION, async (di: DependencyInjection, requ
   let lambdaResponse;
   const dataprocessor = new DataProcessor();
   try {
-    const data = await dataprocessor.getData();
+    const data = await dataprocessor.getWebData();
     lambdaResponse = new ResponseModel(data, 200, 'ok');
   } catch (error) {
     lambdaResponse = new ResponseModel({error}, 500, 'error');
