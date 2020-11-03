@@ -19,6 +19,13 @@ functions:
           path: hello
           method: get
           cors: true
+  processdata:
+    handler: handler.processdata
+    events:
+      - http:
+          path: processdata
+          method: get
+          cors: true
 
 plugins:
   - serverless-offline
@@ -32,6 +39,7 @@ custom:
     noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]
+    allowCache: true
 
   webpack:
     packager: 'yarn'
