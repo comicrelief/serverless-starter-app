@@ -51,6 +51,7 @@
   "dependencies": {
     "@comicrelief/lambda-wrapper": "^1.1.10",
     "axios": "^0.21.0",
-    "got": "^11.8.0"
+    "got": "^11.8.0",
+    "hpagent": "^0.1.1"
   }
 }
