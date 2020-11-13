@@ -1,0 +1,29 @@
+{
+  // Copy this file to .vscode/launch.json
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug: Serverless Offline",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      // Use the package.json script
+      // instead of calling serverless offline directly because:
+      // 1. Doesn't require a locally installed sls
+      // 2. Uses a pre-configured call to sls offline (i.e. passing the api key)
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "offline"
+      ],
+      "sourceMaps": true,
+      "protocol": "inspector",
+      "outFiles": ["${workspaceFolder}/.webpack/**/*.js"],
+      "env": {
+        "SLS_DEBUG": "*", // More debug info
+        "WEBPACK_MODE": "development" // Creates the source maps
+      }
+    }
+  ]
+}
