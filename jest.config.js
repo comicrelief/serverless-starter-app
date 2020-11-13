@@ -1,17 +1,15 @@
-const getProject = (type, color) => {
-  return {
-    displayName: {
-      name: type.toUpperCase(),
-      color,
-    },
-    moduleNameMapper: {
-      '~/(.*)$': '<rootDir>/$1',
-    },
-    setupFiles: ['<rootDir>/tests/setup.js'],
-    testMatch: [`<rootDir>/tests/${type}/**/*.spec.js`],
-    testEnvironment: 'node',
-  };
-};
+const getProject = (type, color) => ({
+  displayName: {
+    name: type.toUpperCase(),
+    color,
+  },
+  moduleNameMapper: {
+    '~/(.*)$': '<rootDir>/$1',
+  },
+  setupFiles: ['<rootDir>/tests/setup.js'],
+  testMatch: [`<rootDir>/tests/${type}/**/*.spec.js`],
+  testEnvironment: 'node',
+});
 
 const jestConfig = {
   projects: [getProject('feat', 'magenta'), getProject('unit', 'blue')],
