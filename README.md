@@ -25,7 +25,7 @@ This repo includes a pre-configured template for the VS Code NodeJS Debugger. It
 
 To get started with debugging, copy the file to `.vscode/launch.json`, or copy its contents to your existing `.vscode/launch.json` file.
 
-Now you can press `CTRL+SHIFT+D` to open the `Run` tab and execute the `Debug: Serverless Offline` configuration.
+Now you can press `CTRL+SHIFT+D` (Windows/Linux) or `SHIFT+CMD+D` (Mac) to open the `Run` tab and execute the `Debug: Serverless Offline` configuration.
 
 The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs and `WEBPACK_MODE=development` to produce source maps.
 
