@@ -1,5 +1,8 @@
-extends: '@comicrelief/eslint-config'
+root: true
 
-settings:
-  import/resolver:
-    babel-module: {}
+extends:
+  - '@comicrelief/eslint-config/mixins/base'
+  - '@comicrelief/eslint-config/mixins/flowtype'
+  - '@comicrelief/eslint-config/mixins/jsdoc'
+  - '@comicrelief/eslint-config/mixins/sonarjs'
+  - '@comicrelief/eslint-config/mixins/unicorn'
