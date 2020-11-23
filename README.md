@@ -14,10 +14,24 @@ For local development you can simulate lambda and an API endpoint locally using
 the following command.
 
 ```bash
-serverless offline start
+yarn offline
 ```
 
 This repository uses JavaScript import aliases with Webpack. If you are using VS Code, the `jsconfig.json` file should handle the autocompletion for you. If you are using WebStorm, you can refer to [this stackoverflow thread](https://stackoverflow.com/questions/34943631/path-aliases-for-imports-in-webstorm).
+
+## Debugging (VS Code)
+
+This repo includes a pre-configured template for the VS Code NodeJS Debugger. It can be found at `.templates/vscode/launch.json`.
+
+To get started with debugging, copy the file to `.vscode/launch.json`, or copy its contents to your existing `.vscode/launch.json` file.
+
+Now you can press `CTRL+SHIFT+D` (Windows/Linux) or `SHIFT+CMD+D` (Mac) to open the `Run` tab and execute the `Debug: Serverless Offline` configuration.
+
+The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs and `WEBPACK_MODE=development` to produce source maps.
+
+For more information on debugging on VS Code, see:
+https://code.visualstudio.com/docs/editor/debugging
+
 
 ## Testing
 
