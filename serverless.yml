@@ -10,6 +10,11 @@ provider:
   region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   stage: ${opt:stage, 'dev'}
   versionFunctions: false
+  environment:
+    EPSAGON_TOKEN: ${env:EPSAGON_TOKEN, ""}
+    EPSAGON_SERVICE_NAME: ${env:EPSAGON_SERVICE_NAME, ""}
+    REGION: ${self:provider.region}
+    STAGE: ${self:provider.stage}
 
 functions:
   hello:
@@ -27,8 +32,10 @@ plugins:
 
 custom:
   serverless-offline:
-    httpPort: 3001 # port to access API endpoints through
-    lambdaPort: 3002 # default is 3002
+    # port to access API endpoints through
+    httpPort: 3001
+    # default is 3002
+    lambdaPort: 3002
     noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]
