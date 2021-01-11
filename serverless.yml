@@ -26,9 +26,9 @@ functions:
           cors: true
 
 plugins:
-  - serverless-offline
   - serverless-webpack
   - serverless-dotenv-plugin
+  - serverless-offline
 
 custom:
   serverless-offline:
