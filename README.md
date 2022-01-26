@@ -1,6 +1,8 @@
 # Serverless Starter App [![Build Status](https://api.travis-ci.org/comicrelief/serverless-starter-app.svg?branch=master)](https://travis-ci.org/comicrelief/serverless-starter-app)
 An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
 
+**[ENG-1143](https://comicrelief.atlassian.net/browse/ENG-1143) This repo is due to be updated to our local standards. If you create a new project from this repo, please implement the needed changes first.**
+
 ## Installation
 
 ```bash
