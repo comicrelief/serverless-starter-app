@@ -50,6 +50,7 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
-    "@comicrelief/lambda-wrapper": "^1.1.10"
+    "@comicrelief/lambda-wrapper": "^1.1.10",
+    "axios": "^0.26.1"
   }
 }

@@ -1,9 +1,13 @@
 import axios from 'axios';
 
+/**
+ *
+ */
 export default class HelloAction {
   /**
    * hello
-   * @return {Promise<any>}
+   *
+   * @returns {Promise<any>}
    */
   static hello() {
     return axios({
