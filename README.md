@@ -1,4 +1,4 @@
-# Serverless Starter App [![Build Status](https://api.travis-ci.org/comicrelief/serverless-starter-app.svg?branch=master)](https://travis-ci.org/comicrelief/serverless-starter-app)
+# Serverless Starter App [![Build Status](https://github.com/comicrelief/serverless-starter-app/workflows/main/badge.svg?branch=master)](https://github.com/comicrelief/serverless-starter-app/actions/workflows/main.yml?query=branch%3Amaster)
 An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
 
 **[ENG-1143](https://comicrelief.atlassian.net/browse/ENG-1143) This repo is due to be updated to our current standards. If you create a new project from this repo, please implement the needed changes first.**
@@ -20,6 +20,18 @@ yarn offline
 ```
 
 This repository uses JavaScript import aliases with Webpack. If you are using VS Code, the `jsconfig.json` file should handle the autocompletion for you. If you are using WebStorm, you can refer to [this stackoverflow thread](https://stackoverflow.com/questions/34943631/path-aliases-for-imports-in-webstorm).
+
+## Starting New Serverless Project
+1. Clone the repo
+2. Edit this values in `package.json`
+   - name
+   - description
+   - author
+   - license
+   - repository
+   - concourse:deploy-pipeline
+3. Edit this values in `serverless.yml`
+   - service
 
 ## Debugging (VS Code)
 
