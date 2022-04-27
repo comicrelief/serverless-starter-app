@@ -2,6 +2,8 @@ service: serverless-starter-app
 
 frameworkVersion: "2.x"
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs12.x
