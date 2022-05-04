@@ -1,4 +1,4 @@
-# Project Name [![CircleCI](https://circleci.com/gh/comicrelief/serverless-payments.svg?style=svg&circle-token=f65be9c11820771b57a54e836db98d22d4ad2fc2)](https://circleci.com/gh/comicrelief/serverless-payments)
+# Project Name [![Build Status](https://github.com/comicrelief/serverless-starter-app/workflows/main/badge.svg?branch=master)](https://github.com/comicrelief/serverless-starter-app/actions/workflows/main.yml?query=branch%3Amaster)
 Add project description. 
  
 ## Documentation
