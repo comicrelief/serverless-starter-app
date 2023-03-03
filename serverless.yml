@@ -1,6 +1,8 @@
 service: serverless-starter-app
 
-frameworkVersion: ">=1.1.0 <2.0.0"
+frameworkVersion: "2.x"
+
+useDotenv: true
 
 provider:
   name: aws
@@ -27,7 +29,6 @@ functions:
 
 plugins:
   - serverless-webpack
-  - serverless-dotenv-plugin
   - serverless-offline
 
 custom:
