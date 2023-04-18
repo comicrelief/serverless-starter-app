@@ -1,6 +1,6 @@
 service: serverless-starter-app
 
-frameworkVersion: "2.x"
+frameworkVersion: "3"
 
 useDotenv: true
 
