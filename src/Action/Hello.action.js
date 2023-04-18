@@ -1,8 +1,8 @@
 import {
   DependencyInjection,
   LambdaWrapper,
-  ResponseModel,
   RequestService,
+  ResponseModel,
 } from '@comicrelief/lambda-wrapper';
 
 import CONFIGURATION from '@/src/Config/Configuration';
