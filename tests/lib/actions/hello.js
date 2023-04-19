@@ -12,7 +12,7 @@ export default class HelloAction {
   static hello() {
     return axios({
       method: 'GET',
-      headers: { 'Origin': '*' },
+      headers: { Origin: '*' },
       url: `${process.env.BASE_URL}/hello`,
       responseType: 'json',
     })

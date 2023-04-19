@@ -11,7 +11,7 @@ describe('feat.Hello', () => {
     const { headers } = await HelloAction.hello();
     expect(headers['content-type']).toEqual('application/json; charset=utf-8');
     expect(headers['access-control-allow-origin']).toEqual('*');
-    expect(headers['access-control-allow-credentials']).toEqual("true");
+    expect(headers['access-control-allow-credentials']).toEqual('true');
   });
 
   it('should respond with "Hello"', async () => {
