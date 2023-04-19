@@ -33,7 +33,7 @@ functions:
           cors: true
 
 plugins:
-  - serverless-webpack
+  - serverless-plugin-typescript
   - serverless-offline
 
 custom:
@@ -45,9 +45,3 @@ custom:
     noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]
-
-  webpack:
-    packager: 'yarn'
-    includeModules:
-      forceExclude:
-        - aws-sdk

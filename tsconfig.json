@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": [
+      "es2019"
+    ],
+    "outDir": ".build",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "*.d.ts",
+    "handler.js"
+  ],
+  "exclude": [
+    "webpack.config.js",
+    "jest.config.js"
+  ]
+}
