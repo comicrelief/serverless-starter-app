@@ -28,7 +28,6 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
     "@comicrelief/eslint-config": "^1.2.0",
-    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "dotenv": "^8.2.0",
