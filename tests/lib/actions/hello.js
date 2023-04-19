@@ -12,7 +12,8 @@ export default class HelloAction {
   static hello() {
     return axios({
       method: 'GET',
-      url: `${process.env.STAGING_BASE_URL}/hello`,
+      headers: { 'Origin': '*' },
+      url: `${process.env.BASE_URL}/hello`,
       responseType: 'json',
     })
       .then((response) => response);

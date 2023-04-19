@@ -1,8 +1,4 @@
-import HelloAction from '@/src/Action/Hello.action';
-
-import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
-
-const promisifiedAction = lambdaPromisifier(HelloAction);
+import HelloAction from '../lib/actions/hello';
 
 // Test definitions.
 describe('feat.Hello', () => {
@@ -14,8 +10,8 @@ describe('feat.Hello', () => {
   it('should return CORS headers', async () => {
     const { headers } = await HelloAction.hello();
     expect(headers['content-type']).toEqual('application/json; charset=utf-8');
-    // expect(headers['Access-Control-Allow-Origin']).toEqual('*');
-    // expect(headers['Access-Control-Allow-Credentials']).toEqual(true);
+    expect(headers['access-control-allow-origin']).toEqual('*');
+    expect(headers['access-control-allow-credentials']).toEqual("true");
   });
 
   it('should respond with "Hello"', async () => {
