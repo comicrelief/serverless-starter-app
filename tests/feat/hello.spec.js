@@ -1,5 +1,6 @@
-import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
 import HelloAction from '@/src/Action/Hello.action';
+
+import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
 
 const promisifiedAction = lambdaPromisifier(HelloAction);
 
