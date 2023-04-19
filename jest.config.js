@@ -4,20 +4,24 @@ const getProject = (type, color) => ({
     color,
   },
   moduleNameMapper: {
-    '~/(.*)$': '<rootDir>/$1',
+    '@/(.*)$': '<rootDir>/$1',
   },
-  setupFiles: ['<rootDir>/tests/setup.js'],
-  testMatch: [`<rootDir>/tests/${type}/**/*.spec.js`],
+  preset: 'ts-jest',
+  setupFiles: ['<rootDir>/tests/setup.ts'],
+  testMatch: [`<rootDir>/tests/${type}/**/*.spec.ts`],
   testEnvironment: 'node',
 });
 
 const jestConfig = {
-  projects: [getProject('feat', 'magenta'), getProject('unit', 'blue')],
+  projects: [
+    getProject('feat', 'magenta'),
+    getProject('unit', 'blue'),
+  ],
 };
 
 if (process.env.COVERAGE) {
   jestConfig.collectCoverage = true;
-  jestConfig.collectCoverageFrom = ['<rootDir>/src/**/*.js'];
+  jestConfig.collectCoverageFrom = ['<rootDir>/src/**/*.ts'];
 }
 
 module.exports = jestConfig;
