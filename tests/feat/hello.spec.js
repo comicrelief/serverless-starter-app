@@ -1,4 +1,8 @@
-import HelloAction from '../lib/actions/hello';
+import HelloAction from '@/src/Action/Hello.action';
+
+import { lambdaPromisifier } from '@/tests/lib/lambda-promisifier';
+
+const promisifiedAction = lambdaPromisifier(HelloAction);
 
 // Test definitions.
 describe('feat.Hello', () => {

@@ -6,3 +6,5 @@ extends:
   - '@comicrelief/eslint-config/mixins/jsdoc'
   - '@comicrelief/eslint-config/mixins/sonarjs'
   - '@comicrelief/eslint-config/mixins/unicorn'
+
+parser: '@babel/eslint-parser'
