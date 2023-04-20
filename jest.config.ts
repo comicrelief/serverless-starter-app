@@ -1,4 +1,4 @@
-const getProject = (type, color) => ({
+const getProject = (type: string, color: string) => ({
   displayName: {
     name: type.toUpperCase(),
     color,
@@ -19,9 +19,4 @@ const jestConfig = {
   ],
 };
 
-if (process.env.COVERAGE) {
-  jestConfig.collectCoverage = true;
-  jestConfig.collectCoverageFrom = ['<rootDir>/src/**/*.ts'];
-}
-
-module.exports = jestConfig;
+export default jestConfig;
