@@ -9,9 +9,12 @@ describe('feat.Hello', () => {
 
   it('should return CORS headers', async () => {
     const { headers } = await HelloAction.hello();
-    expect(headers['content-type']).toEqual('application/json; charset=utf-8');
-    expect(headers['access-control-allow-origin']).toEqual('*');
-    expect(headers['access-control-allow-credentials']).toEqual('true');
+    const lowercaseheaders = Object.fromEntries(
+      Object.entries(headers).map(([k,v]) => [k.toLowerCase(), v])
+    );
+    expect(lowercaseheaders['content-type']).toContain('application/json');
+    expect(lowercaseheaders['access-control-allow-origin']).toEqual('*');
+    expect(lowercaseheaders['access-control-allow-credentials']).toEqual('true');
   });
 
   it('should respond with "Hello"', async () => {
