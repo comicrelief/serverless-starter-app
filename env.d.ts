@@ -1,6 +1,12 @@
-// Types for environment variables
+// Type definitions for environment variables
+// See https://stackoverflow.com/a/53981706
 
-declare namespace NodeJS {
-  interface ProcessEnv {
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      EXAMPLE_ENV_VAR: string;
+    }
   }
 }
+
+export {};
