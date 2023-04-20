@@ -25,8 +25,9 @@ describe('feat.Hello', () => {
     expect(lowercaseheaders['access-control-allow-credentials']).toEqual('true');
   });
 
-  it('should respond with "Hello"', async () => {
+  it('should respond with the correct message', async () => {
     const { data } = await makeRequest();
-    expect(data.data.response).toEqual('Hello');
+    console.log(data);
+    expect(data.message).toEqual('hello nobody');
   });
 });
