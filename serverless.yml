@@ -17,11 +17,6 @@ provider:
     EPSAGON_SERVICE_NAME: ${env:EPSAGON_SERVICE_NAME, ""}
     REGION: ${self:provider.region}
     STAGE: ${self:provider.stage}
-  
-  apiGateway:
-    apiKeys:
-      - value: ${env:API_KEY}
-        description: Example key for ApiGateway
 
 functions:
   hello:
