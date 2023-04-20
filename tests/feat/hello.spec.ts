@@ -17,12 +17,9 @@ describe('feat.Hello', () => {
 
   it('should return CORS headers', async () => {
     const { headers } = await makeRequest();
-    const lowercaseheaders = Object.fromEntries(
-      Object.entries(headers).map(([k, v]) => [k.toLowerCase(), v]),
-    );
-    expect(lowercaseheaders['content-type']).toContain('application/json');
-    expect(lowercaseheaders['access-control-allow-origin']).toEqual('*');
-    expect(lowercaseheaders['access-control-allow-credentials']).toEqual('true');
+    expect(headers['content-type']).toContain('application/json');
+    expect(headers['access-control-allow-origin']).toEqual('*');
+    expect(headers['access-control-allow-credentials']).toEqual('true');
   });
 
   it('should respond with the correct message', async () => {
