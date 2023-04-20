@@ -13,7 +13,7 @@ export default class HelloAction {
     return axios({
       method: 'GET',
       headers: { Origin: '*' },
-      url: `${process.env.BASE_URL}/hello`,
+      url: `${process.env.SERVICE_BASE_URL}/hello`,
       responseType: 'json',
     })
       .then((response) => response);
