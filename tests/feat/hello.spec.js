@@ -5,7 +5,7 @@ async function makeRequest() {
     headers: { Origin: '*' },
     baseURL: process.env.SERVICE_BASE_URL,
     responseType: 'json',
-  })
+  });
 }
 
 // Test definitions.
@@ -18,7 +18,7 @@ describe('feat.Hello', () => {
   it('should return CORS headers', async () => {
     const { headers } = await makeRequest();
     const lowercaseheaders = Object.fromEntries(
-      Object.entries(headers).map(([k,v]) => [k.toLowerCase(), v])
+      Object.entries(headers).map(([k, v]) => [k.toLowerCase(), v]),
     );
     expect(lowercaseheaders['content-type']).toContain('application/json');
     expect(lowercaseheaders['access-control-allow-origin']).toEqual('*');
