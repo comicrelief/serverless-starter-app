@@ -24,7 +24,6 @@ describe('feat.Hello', () => {
 
   it('should respond with the correct message', async () => {
     const { data } = await makeRequest();
-    console.log(data);
     expect(data.message).toEqual('hello nobody');
   });
 });
