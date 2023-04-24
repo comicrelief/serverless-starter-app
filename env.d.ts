@@ -5,6 +5,7 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       EXAMPLE_ENV_VAR: string;
+      SERVICE_BASE_URL: string;
     }
   }
 }
