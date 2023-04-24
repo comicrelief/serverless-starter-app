@@ -28,10 +28,9 @@
   "include": [
     "src/**/*.ts",
     "*.d.ts",
-    "handler.js"
+    "handler.ts"
   ],
   "exclude": [
-    "webpack.config.js",
-    "jest.config.js"
+    "jest.config.ts"
   ]
 }
