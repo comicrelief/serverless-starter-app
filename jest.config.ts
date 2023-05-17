@@ -1,4 +1,7 @@
-const getProject = (type: string, color: string) => ({
+import type { ForegroundColor } from 'chalk';
+import type { Config } from 'jest';
+
+const getProject = (type: string, color: typeof ForegroundColor) => ({
   displayName: {
     name: type.toUpperCase(),
     color,
@@ -12,7 +15,7 @@ const getProject = (type: string, color: string) => ({
   testEnvironment: 'node',
 });
 
-const jestConfig = {
+const jestConfig: Config = {
   projects: [
     getProject('feat', 'magenta'),
     getProject('unit', 'blue'),
