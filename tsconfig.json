@@ -4,10 +4,10 @@
     "strictNullChecks": true,
     "sourceMap": true,
     "allowJs": true,
-    "target": "es2018",
+    "target": "es2022",
     "module": "commonjs",
     "lib": [
-      "es2019"
+      "es2022"
     ],
     "outDir": ".build",
     "moduleResolution": "node",
