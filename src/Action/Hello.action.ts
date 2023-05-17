@@ -5,16 +5,20 @@ import lambdaWrapper, {
 
 /**
  * An example handler
- *
- * @param {DependencyInjection} di
- * @returns {Promise<ResponseModel>}
  */
 export default lambdaWrapper.wrap(async (di) => {
   const request = di.get(RequestService);
 
+  // Get the name from the query parameters
+  const name = request.get('name');
+
+  const body = {
+    response: name ? `Hello ${name}` : 'Hello',
+  };
+
   return ResponseModel.generate(
-    {},
+    body,
     200,
-    `hello ${request.get('name', 'nobody')}`,
+    'ok',
   );
 });
