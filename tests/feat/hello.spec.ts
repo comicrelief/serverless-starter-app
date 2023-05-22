@@ -22,7 +22,7 @@ describe('feat.Hello', () => {
     expect(headers['access-control-allow-credentials']).toEqual('true');
   });
 
-  it('should respond with "Hello"', async () => {
+  it('should respond with the correct message', async () => {
     const { data } = await makeRequest();
     expect(data.data.response).toEqual('Hello');
   });

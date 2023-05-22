@@ -1,7 +1,6 @@
-# Serverless Starter App [![Build Status](https://api.travis-ci.org/comicrelief/serverless-starter-app.svg?branch=master)](https://travis-ci.org/comicrelief/serverless-starter-app)
-An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
+# Serverless Starter App
 
-**[ENG-1143](https://comicrelief.atlassian.net/browse/ENG-1143) This repo is due to be updated to our current standards. If you create a new project from this repo, please implement the needed changes first.**
+A TypeScript starter application that can be used as a base for serverless projects hosted on AWS.
 
 ## Installation
 
@@ -19,8 +18,6 @@ the following command.
 yarn offline
 ```
 
-This repository uses JavaScript import aliases with Webpack. If you are using VS Code, the `jsconfig.json` file should handle the autocompletion for you. If you are using WebStorm, you can refer to [this stackoverflow thread](https://stackoverflow.com/questions/34943631/path-aliases-for-imports-in-webstorm).
-
 ## Debugging (VS Code)
 
 This repo includes a pre-configured template for the VS Code NodeJS Debugger. It can be found at `.templates/vscode/launch.json`.
@@ -29,11 +26,10 @@ To get started with debugging, copy the file to `.vscode/launch.json`, or copy i
 
 Now you can press `CTRL+SHIFT+D` (Windows/Linux) or `SHIFT+CMD+D` (Mac) to open the `Run` tab and execute the `Debug: Serverless Offline` configuration.
 
-The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs and `WEBPACK_MODE=development` to produce source maps.
+The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs.
 
 For more information on debugging on VS Code, see:
-https://code.visualstudio.com/docs/editor/debugging
-
+<https://code.visualstudio.com/docs/editor/debugging>
 
 ## Testing
 
@@ -41,14 +37,13 @@ Tests are located in the `tests` folder an can be invoked by running `yarn test`
 actions in a wrapper, where the response can then be tested.
 
 ## Further Reading
-- [Babel](http://babeljs.io/)
-    - Provides ES6 javascript compilation.
+
+- [TypeScript](https://www.typescriptlang.org/)
+  - JavaScript super-set which provides static type checking and inference.
 - [ESLint](https://eslint.org/)
-    - Provides linting to ensure coding standards are adhered to.
-- [Facebook Flow](https://flow.org/)
-    - Provides static type checking.
+  - Provides linting to ensure coding standards are adhered to.
 - [Serverless Framework](https://serverless.com/)
-    - The framework that the project is built on.
+  - The framework that the project is built on.
 
 ## License
 
