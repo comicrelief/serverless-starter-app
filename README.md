@@ -1,4 +1,4 @@
-# Serverless Starter App
+# Serverless Starter App [![Build Status](https://github.com/comicrelief/serverless-starter-app/workflows/main/badge.svg?branch=master)](https://github.com/comicrelief/serverless-starter-app/actions/workflows/main.yml?query=branch%3Amaster)
 
 A TypeScript starter application that can be used as a base for serverless projects hosted on AWS.
 
@@ -17,6 +17,31 @@ the following command.
 ```bash
 yarn offline
 ```
+
+## Starting New Serverless Project
+
+1. Clone the repo into a new folder describing your new serverless project
+
+    ```bash
+    git clone https://github.com/comicrelief/serverless-starter-app.git serverless-new-app
+    ```
+
+2. Change the remote url for the new project
+
+    ```bash
+    git remote set-url origin https://github.com/comicrelief/serverless-new-app.git
+    ```
+
+3. Edit these values in `package.json`
+   - name
+   - description
+   - author
+   - license
+   - repository
+   - concourse:deploy-pipeline
+
+4. Edit this value in `serverless.yml`
+   - service
 
 ## Debugging (VS Code)
 
