@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 # Serverless Starter App [![Build Status](https://github.com/comicrelief/serverless-starter-app/workflows/main/badge.svg?branch=master)](https://github.com/comicrelief/serverless-starter-app/actions/workflows/main.yml?query=branch%3Amaster)
 
 An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
+=======
+# Serverless Starter App
+>>>>>>> master
 
-**[ENG-1143](https://comicrelief.atlassian.net/browse/ENG-1143) This repo is due to be updated to our current standards. If you create a new project from this repo, please implement the needed changes first.**
+A TypeScript starter application that can be used as a base for serverless projects hosted on AWS.
 
 ## Installation
 
@@ -55,10 +59,10 @@ To get started with debugging, copy the file to `.vscode/launch.json`, or copy i
 
 Now you can press `CTRL+SHIFT+D` (Windows/Linux) or `SHIFT+CMD+D` (Mac) to open the `Run` tab and execute the `Debug: Serverless Offline` configuration.
 
-The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs and `WEBPACK_MODE=development` to produce source maps.
+The configuration will spawn a `yarn offline` process, so you can configure your execution directly from `package.json`. It will also add `SLS_DEBUG=*` for more extensive logs.
 
 For more information on debugging on VS Code, see:
-https://code.visualstudio.com/docs/editor/debugging
+<https://code.visualstudio.com/docs/editor/debugging>
 
 ## Testing
 
@@ -67,12 +71,10 @@ actions in a wrapper, where the response can then be tested.
 
 ## Further Reading
 
-- [Babel](http://babeljs.io/)
-  - Provides ES6 javascript compilation.
+- [TypeScript](https://www.typescriptlang.org/)
+  - JavaScript super-set which provides static type checking and inference.
 - [ESLint](https://eslint.org/)
   - Provides linting to ensure coding standards are adhered to.
-- [Facebook Flow](https://flow.org/)
-  - Provides static type checking.
 - [Serverless Framework](https://serverless.com/)
   - The framework that the project is built on.
 
