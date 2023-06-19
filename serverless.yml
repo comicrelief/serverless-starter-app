@@ -1,10 +1,12 @@
 service: serverless-starter-app
 
-frameworkVersion: ">=1.1.0 <2.0.0"
+frameworkVersion: "3"
+
+useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   memorySize: 128
   timeout: 60
   region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
@@ -26,8 +28,7 @@ functions:
           cors: true
 
 plugins:
-  - serverless-webpack
-  - serverless-dotenv-plugin
+  - serverless-plugin-typescript
   - serverless-offline
 
 custom:
@@ -39,9 +40,3 @@ custom:
     noPrependStageInUrl: true
     babelOptions:
       presets: ["env"]
-
-  webpack:
-    packager: 'yarn'
-    includeModules:
-      forceExclude:
-        - aws-sdk
