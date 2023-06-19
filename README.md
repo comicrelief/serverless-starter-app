@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 # Serverless Starter App [![Build Status](https://github.com/comicrelief/serverless-starter-app/workflows/main/badge.svg?branch=master)](https://github.com/comicrelief/serverless-starter-app/actions/workflows/main.yml?query=branch%3Amaster)
-
-An ES6 starter application that can be used as a base for serverless projects hosted on AWS.
-=======
-# Serverless Starter App
->>>>>>> master
 
 A TypeScript starter application that can be used as a base for serverless projects hosted on AWS.
 
@@ -23,8 +17,6 @@ the following command.
 ```bash
 yarn offline
 ```
-
-This repository uses JavaScript import aliases with Webpack. If you are using VS Code, the `jsconfig.json` file should handle the autocompletion for you. If you are using WebStorm, you can refer to [this stackoverflow thread](https://stackoverflow.com/questions/34943631/path-aliases-for-imports-in-webstorm).
 
 ## Starting New Serverless Project
 
