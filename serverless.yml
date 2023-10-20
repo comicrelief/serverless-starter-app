@@ -12,6 +12,11 @@ provider:
   region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   stage: ${opt:stage, 'dev'}
   versionFunctions: false
+  stackTags:
+    service: ${self:service}
+    stage: ${sls:stage}
+    service-stage: ${self:service}-${sls:stage}
+
   environment:
     EPSAGON_TOKEN: ${env:EPSAGON_TOKEN, ""}
     EPSAGON_SERVICE_NAME: ${env:EPSAGON_SERVICE_NAME, ""}
@@ -39,4 +44,4 @@ custom:
     lambdaPort: 3002
     noPrependStageInUrl: true
     babelOptions:
-      presets: ["env"]
+      presets: [ "env" ]
