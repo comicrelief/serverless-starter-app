@@ -45,4 +45,4 @@ custom:
     lambdaPort: 3002
     noPrependStageInUrl: true
     babelOptions:
-      presets: [ "env" ]
+      presets: ["env"]
