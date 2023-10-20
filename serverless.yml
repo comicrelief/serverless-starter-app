@@ -16,6 +16,7 @@ provider:
     service: ${self:service}
     stage: ${sls:stage}
     service-stage: ${self:service}-${sls:stage}
+    lumigo:auto-trace: "true"
 
   environment:
     EPSAGON_TOKEN: ${env:EPSAGON_TOKEN, ""}
