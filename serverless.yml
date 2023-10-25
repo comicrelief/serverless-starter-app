@@ -12,11 +12,13 @@ provider:
   region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   stage: ${opt:stage, 'dev'}
   versionFunctions: false
+
   stackTags:
     service: ${self:service}
     stage: ${sls:stage}
     service-stage: ${self:service}-${sls:stage}
     lumigo:auto-trace: "true"
+    LUMIGO_TAG: ${self:service}-${sls:stage}
 
   environment:
     EPSAGON_TOKEN: ${env:EPSAGON_TOKEN, ""}
