@@ -1,12 +1,12 @@
 service: serverless-starter-app
 
-frameworkVersion: "3"
+frameworkVersion: "^3"
 
 useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs18.x
   memorySize: 128
   timeout: 60
   region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
@@ -46,5 +46,3 @@ custom:
     # default is 3002
     lambdaPort: 3002
     noPrependStageInUrl: true
-    babelOptions:
-      presets: ["env"]
