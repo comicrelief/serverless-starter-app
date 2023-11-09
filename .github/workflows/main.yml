@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 14
+      - name: Use Node 18
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: '18'
           # Comment the next line out
           # if the repo uses Github Package Registry packages
           # registry-url: 'https://npm.pkg.github.com'
@@ -43,10 +43,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 14
+      - name: Use Node 18
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: '18'
           # Comment the next line out
           # if the repo uses Github Package Registry packages
           # registry-url: 'https://npm.pkg.github.com'
