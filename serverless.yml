@@ -9,8 +9,8 @@ provider:
   runtime: nodejs18.x
   memorySize: 128
   timeout: 60
-  region: ${env:AWS_REGION, env:AWS_DEFAULT_REGION, 'eu-west-1'}
-  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+  stage: dev
   versionFunctions: false
 
   stackTags:
@@ -21,8 +21,8 @@ provider:
     LUMIGO_TAG: ${self:service}-${sls:stage}
 
   environment:
-    REGION: ${self:provider.region}
-    STAGE: ${self:provider.stage}
+    REGION: ${aws:region}
+    STAGE: ${sls:stage}
 
 functions:
   - ${file(./serverless/functions/hello.yml)}
