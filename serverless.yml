@@ -21,8 +21,6 @@ provider:
     LUMIGO_TAG: ${self:service}-${sls:stage}
 
   environment:
-    EPSAGON_TOKEN: ${env:EPSAGON_TOKEN, ""}
-    EPSAGON_SERVICE_NAME: ${env:EPSAGON_SERVICE_NAME, ""}
     REGION: ${aws:region}
     STAGE: ${sls:stage}
 
