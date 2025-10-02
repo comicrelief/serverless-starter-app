@@ -19,7 +19,7 @@ jobs:
           # registry-url: 'https://npm.pkg.github.com'
 
       - name: Restore packages cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -52,7 +52,7 @@ jobs:
           # registry-url: 'https://npm.pkg.github.com'
 
       - name: Restore packages cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
