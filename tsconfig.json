@@ -4,14 +4,14 @@
     "strictNullChecks": true,
     "sourceMap": true,
     "allowJs": true,
-    "target": "es2023",
-    "module": "nodenext",
+    "target": "es2022",
+    "module": "commonjs",
     "lib": [
-      "es2023"
+      "es2022"
     ],
     "types": ["node", "jest"],
     "outDir": ".build",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "rootDir": ".",
     "baseUrl": "./",
@@ -31,7 +31,7 @@
     "*.d.ts",
     "handler.ts"
   ],
-  // "exclude": [
-  //   "jest.config.ts"
-  // ]
+  "exclude": [
+    "jest.config.ts"
+  ]
 }
