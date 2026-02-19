@@ -45,5 +45,8 @@
   "dependencies": {
     "@comicrelief/lambda-wrapper": "^2.0.0-beta.3",
     "axios": "^1.12.2"
+  },
+  "resolutions": {
+    "@types/minimatch": "5.1.2"
   }
 }

@@ -9,7 +9,6 @@
     "lib": [
       "es2022"
     ],
-    "types": ["node", "jest"],
     "outDir": ".build",
     "moduleResolution": "node",
     "esModuleInterop": true,
