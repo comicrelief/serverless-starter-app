@@ -5,6 +5,9 @@
   "author": "Adam Clark",
   "license": "MIT",
   "repository": "https://github.com/comicrelief/serverless-starter-app",
+  "engines": {
+    "node": "22"
+  },
   "scripts": {
     "lint": "eslint .",
     "concourse:deploy-pipeline": "fly -t cr-cicd-engineering set-pipeline -p serverless-starter-app -c concourse/pipeline.yml -l concourse/private.yml",
