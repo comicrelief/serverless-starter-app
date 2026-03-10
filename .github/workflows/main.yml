@@ -10,16 +10,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 18
+      - name: Use Node 22
         uses: actions/setup-node@v1
         with:
-          node-version: '18'
+          node-version: '22'
           # Comment the next line out
           # if the repo uses Github Package Registry packages
           # registry-url: 'https://npm.pkg.github.com'
 
       - name: Restore packages cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -43,16 +43,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 18
+      - name: Use Node 22
         uses: actions/setup-node@v1
         with:
-          node-version: '18'
+          node-version: '22'
           # Comment the next line out
           # if the repo uses Github Package Registry packages
           # registry-url: 'https://npm.pkg.github.com'
 
       - name: Restore packages cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
