@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.0.0
+    - uses: actions/checkout@v6
     - name: Block Merge with fixup commit
       uses: 13rac1/block-fixup-merge-action@v1.1.1
