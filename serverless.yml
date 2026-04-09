@@ -6,7 +6,7 @@ useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs22.x
   memorySize: 128
   timeout: 60
   region: eu-west-1
