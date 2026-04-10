@@ -43,7 +43,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@comicrelief/lambda-wrapper": "^2.0.0-beta.3",
+    "@comicrelief/lambda-wrapper": "^2.1.2",
     "axios": "^1.3.6"
   },
   "resolutions": {
